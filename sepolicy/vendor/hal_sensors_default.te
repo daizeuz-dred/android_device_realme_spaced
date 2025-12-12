@@ -13,3 +13,10 @@ allow hal_sensors_default vendor_proc_oplus_sensor_cali:file rw_file_perms;
 allow hal_sensors_default oplus_block_device:blk_file r_file_perms;
 allow hal_sensors_default block_device:dir search;
 allow hal_sensors_default persist_data_file:dir search;
+
+# Allow access for dynamic sensor properties.
+get_prop(hal_sensors_default, vendor_dynamic_sensor_prop)
+
+# Allow access to raw HID devices for dynamic sensors.
+allow hal_sensors_default device:dir r_dir_perms;
+allow hal_sensors_default hidraw_device:chr_file rw_file_perms;
