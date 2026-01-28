@@ -155,6 +155,12 @@ function blob_fixup {
             [ "$2" = "" ] && return 0
             grep -q "libcutils.so" "${2}" || "${PATCHELF}" --add-needed "libcutils.so" "${2}"
             ;;
+        vendor/lib*/hw/audio.primary.mt6785.so|\
+        vendor/lib*/librt_extamp_intf.so|\
+        vendor/lib*/hw/vendor.mediatek.hardware.pq@2.15-impl.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --replace-needed "libtinyxml2.so" "libtinyxml2-v34.so" "${2}"
+            ;;
         vendor/lib64/hw/hwcomposer.mt6781.so)
             [ "$2" = "" ] && return 0
              grep -q "libprocessgroup_shim.so" "${2}" || "${PATCHELF}" --add-needed "libprocessgroup_shim.so" "${2}"
