@@ -232,6 +232,10 @@ PRODUCT_PACKAGES += \
    libkeystore-engine-wifi-hidl \
    libnetutils.vendor
 
+# libtinyxml-v34
+PRODUCT_PACKAGES += \
+    libtinyxml2-v34
+
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light-service.spaced
