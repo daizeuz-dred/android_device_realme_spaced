@@ -46,10 +46,6 @@ genfscon sysfs /class/oplus_sensor                  u:object_r:vendor_sysfs_oplu
 # Oplus
 genfscon proc /oplusVersion                         u:object_r:vendor_proc_oplus_version:s0
 
-# Performance
-genfscon proc /sys/kernel/sched_assist_enabled       u:object_r:proc_sched_assist:s0
-genfscon proc /sys/kernel/sched_assist_scene         u:object_r:proc_sched_assist:s0
-
 # Wakeup
 genfscon sysfs /devices/platform/charger/power_supply/usb/wakeup28                                      u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/charger/power_supply/battery/wakeup29                                  u:object_r:sysfs_wakeup:s0

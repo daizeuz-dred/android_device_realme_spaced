@@ -49,8 +49,5 @@ type oplus_block_device, dev_type;
 # Oplus
 type vendor_proc_oplus_version, fs_type, proc_type;
 
-# Performance
-type proc_sched_assist, fs_type, proc_type;
-
 # GPU
 type vendor_sysfs_gpu, fs_type, sysfs_type;
