@@ -100,7 +100,7 @@
     },
     {
       "Name": "GPUMinFreq",
-      "Path": "/sys/devices/platform/13000000.mali/devfreq/13000000.mali/min_freq",
+      "Path": "/sys/class/devfreq/13000000.mali/min_freq",
       "Values": [
         "950000000",
         "940000000",
@@ -156,7 +156,7 @@
     },
     {
       "Name": "GPUMaxFreq",
-      "Path": "/sys/devices/platform/13000000.mali/devfreq/13000000.mali/max_freq",
+      "Path": "/sys/class/devfreq/13000000.mali/max_freq",
       "Values": [
         "950000000",
         "940000000",
