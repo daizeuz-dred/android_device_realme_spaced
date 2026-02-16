@@ -480,7 +480,6 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/mediatek \
     hardware/oplus \
-    hardware/lineage/compat \
     hardware/google/interfaces \
     hardware/google/pixel \
     hardware/mediatek \
