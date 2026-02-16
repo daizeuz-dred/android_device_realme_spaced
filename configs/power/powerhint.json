@@ -160,24 +160,6 @@
       "ResetOnInit": true
     },
     {
-      "Name": "DRAMOppMin",
-      "Path": "/proc/perfmgr/boost_ctrl/dram_ctrl/ddr",
-      "Values": [
-        "1",
-        "-1"
-      ],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "SchedBoost",
-      "Path": "/proc/perfmgr/boost_ctrl/eas_ctrl/sched_boost",
-      "Values": [
-        "1",
-        "0"
-      ],
-      "ResetOnInit": true
-    },
-    {
       "Name": "DoubleTapToWake",
       "Path": "/proc/touchpanel/double_tap_enable",
       "Values": [
@@ -323,18 +305,6 @@
       "Node": "TAUclampMin",
       "Duration": 3000,
       "Value": "100"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "DRAMOppMin",
-      "Duration": 3000,
-      "Value": "1"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "SchedBoost",
-      "Duration": 3000,
-      "Value": "1"
     },
     {
       "PowerHint": "CAMERA_LAUNCH",
