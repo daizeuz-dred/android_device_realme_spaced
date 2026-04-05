@@ -565,4 +565,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.1-service-mediatek
 
-PRODUCT_BOOT_JARS += telephony-common
