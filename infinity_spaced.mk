@@ -12,9 +12,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/realme/spaced/device.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_spaced
+PRODUCT_NAME := infinity_spaced
 PRODUCT_DEVICE := spaced
 PRODUCT_MANUFACTURER := realme
 PRODUCT_BRAND := realme
@@ -48,3 +48,12 @@ $(call soong_config_set,surfaceflinger,frame_rate_category_min,120)
 
 # Private Keys Setup
 -include vendor/lineage-priv/keys/keys.mk
+
+# Maintainer Name
+INFINITY_MAINTAINER := "DEEZNUTZ" 
+
+# Whether the device supports Fingerprint On Display
+TARGET_HAS_UDFPS := false
+
+# Whether Including Google Apps
+WITH_GAPPS := true

@@ -655,3 +655,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_COPY_FILES += \
     device/realme/spaced/rootdir/etc/init.mt6781.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mt6781.usb.rc
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.product.marketname=realme 8i \
+    ro.infinity.soc=MediaTek Helio G96 \
+    ro.infinity.camera=50MP + 2MP + 2MP + 16MP
