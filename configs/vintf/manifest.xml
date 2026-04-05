@@ -236,4 +236,13 @@
         <fqname>@1.0::IOplusRadio/oplus_slot1</fqname>
         <fqname>@1.0::IOplusRadio/oplus_slot2</fqname>
     </hal>
+    <hal format="hidl">
+        <name>android.hardware.bluetooth</name>
+        <transport>hwbinder</transport>
+        <version>1.1</version>
+        <interface>
+            <name>IBluetoothHci</name>
+            <instance>default</instance>
+    </interface>
+</hal>
 </manifest>
