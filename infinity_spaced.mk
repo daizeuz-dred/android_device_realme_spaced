@@ -32,3 +32,9 @@ TARGET_HAS_UDFPS := false
 
 # Whether Including Google Apps
 WITH_GAPPS := true
+
+# Include Dolby Atmos
+$(call inherit-product, hardware/dolby/dolby.mk)
+
+# Include Gcam
+$(call inherit-product, vendor/gcam/gcam-vendor.mk)
