@@ -23,3 +23,19 @@ PRODUCT_MODEL := RMX3286
 PRODUCT_GMS_CLIENTID_BASE := android-realme
 
 BUILD_FINGERPRINT := realme/RMX3286/RE54B4L1:13/SP1A.210812.016/R.1c05817+2a8bc:user/release-keys
+
+# Maintainer Name
+INFINITY_MAINTAINER := "DEEZNUTZ" 
+
+# Whether the device supports Fingerprint On Display
+TARGET_HAS_UDFPS := false
+
+# Whether Including Google Apps
+WITH_GAPPS := true
+
+>>>>>>> f243668 (spaced: lineage-23.2 device tree):lineage_spaced.mk
+# Include Dolby Atmos
+$(call inherit-product, hardware/dolby/dolby.mk)
+
+# Include Gcam
+$(call inherit-product, vendor/gcam/gcam-vendor.mk)
