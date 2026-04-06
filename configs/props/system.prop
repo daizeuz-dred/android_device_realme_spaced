@@ -85,3 +85,7 @@ persist.vendor.wfc.sys_wfc_support=1
 # Zygote
 ro.zygote.preload.enable=0
 zygote.critical_window.minute=10
+
+# OTA Updater
+lineage.updater.uri=https://daizeuz-dred.github.io/ota/spaced.json
+infinity.updater.uri=https://daizeuz-dred.github.io/ota/spaced.json
