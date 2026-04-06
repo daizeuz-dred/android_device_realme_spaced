@@ -558,10 +558,30 @@ PRODUCT_COPY_FILES += \
 $(call inherit-product, vendor/realme/spaced/spaced-vendor.mk)
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.product.marketname=realme 8i \
+    ro.product.marketname=Realme 8i \
     ro.infinity.soc=MediaTek Helio G96 \
     ro.infinity.camera=50MP + 2MP + 2MP + 16MP
 
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.1-service-mediatek
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    lineage.updater.uri=https://daizeuz-dred.github.io/ota/spaced.json \
+    infinity.updater.uri=https://daizeuz-dred.github.io/ota/spaced.json
+
+# Graphics & SurfaceFlinger Tuning
+PRODUCT_PROPERTY_OVERRIDES += \
+    # Enables Triple Buffering to prevent recording lag
+    ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
+    
+    # Fixes the "Black Flash" flicker during overlays
+    debug.sf.latch_unsignaled=1 \
+    debug.sf.enable_gl_backpressure=1 \
+    
+    # Refresh Rate & Sync Timers
+    ro.surface_flinger.set_touch_timer_ms=200 \
+    ro.surface_flinger.set_display_power_timer_ms=1000 \
+    ro.surface_flinger.present_time_offset_ns=2000000 \
+    
+    # Disable MTK Ambient Adaptive Light (Common flicker source)
+    ro.vendor.mtk_aal_support=0
