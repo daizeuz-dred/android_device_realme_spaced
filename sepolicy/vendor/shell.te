@@ -1,0 +1,8 @@
+# Allow the shell (ADB) to debug GED GPU nodes
+# We add this so 'ls' and 'cat' work in terminal for these nodes
+
+# This allows the shell to enter the directory
+allow shell sysfs_ged:dir { search read open };
+
+# This allows the shell to see the file attributes and read it
+allow shell sysfs_ged:file { getattr read open };
