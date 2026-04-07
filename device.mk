@@ -591,9 +591,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.disable_hwc=1 \
     debug.sf.layered_blur_res_divisor=3 \
 
-# SurfaceFlinger: Give the compositor more time for 90Hz/120Hz
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    debug.sf.early_phase_offset_ns=500000 \
-    debug.sf.early_gl_phase_offset_ns=300000 \
-    debug.sf.high_fps_early_phase_offset_ns=6100000 \
-    debug.sf.high_fps_early_gl_phase_offset_ns=9000000
