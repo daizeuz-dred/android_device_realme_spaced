@@ -585,3 +585,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     
     # Disable MTK Ambient Adaptive Light (Common flicker source)
     ro.vendor.mtk_aal_support=0
+
+# SurfaceFlinger / Flicker Fix
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.sf.disable_hwc=1 \
+    debug.sf.layered_blur_res_divisor=3 \

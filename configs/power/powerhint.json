@@ -100,8 +100,9 @@
     },
     {
       "Name": "GPUMinFreq",
-      "Path": "/sys/class/devfreq/13000000.mali/min_freq",
+      "Path": "/sys/kernel/gpu/gpu_min_clock",
       "Values": [
+        "200000000",
         "950000000",
         "940000000",
         "930000000",
@@ -152,11 +153,13 @@
         "316000000",
         "300000000"
       ],
+      "DefaultValue": "200000000",
+      "ResetValue": "200000000",
       "ResetOnInit": true
     },
     {
       "Name": "GPUMaxFreq",
-      "Path": "/sys/class/devfreq/13000000.mali/max_freq",
+      "Path": "/sys/kernel/gpu/gpu_max_clock",
       "Values": [
         "950000000",
         "940000000",
@@ -364,6 +367,12 @@
       "Node": "GPUSchedMode",
       "Duration": 0,
       "Value": "1"
+    },
+    {
+      "PowerHint": "VIDEO_ENCODE",
+      "Node": "GPUMinFreq",
+      "Duration": 0,
+      "Value": "950000000"
     },
     {
       "PowerHint": "INTERACTION",
