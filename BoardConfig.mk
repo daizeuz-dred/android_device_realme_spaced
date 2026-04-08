@@ -191,3 +191,6 @@ WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 
 # Inherit the proprietary files
 include vendor/realme/spaced/BoardConfigVendor.mk
+
+# Radio
+MTK_RIL_SUPPORT := true

@@ -557,17 +557,8 @@ PRODUCT_COPY_FILES += \
 # Inherit the proprietary files
 $(call inherit-product, vendor/realme/spaced/spaced-vendor.mk)
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.product.marketname=Realme 8i \
-    ro.infinity.soc=MediaTek Helio G96 \
-    ro.infinity.camera=50MP + 2MP + 2MP + 16MP
-
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.1-service-mediatek
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    lineage.updater.uri=https://daizeuz-dred.github.io/ota/spaced.json \
-    infinity.updater.uri=https://daizeuz-dred.github.io/ota/spaced.json
 
 # Graphics & SurfaceFlinger Tuning
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -586,8 +577,26 @@ PRODUCT_PROPERTY_OVERRIDES += \
     # Disable MTK Ambient Adaptive Light (Common flicker source)
     ro.vendor.mtk_aal_support=0
 
-# SurfaceFlinger / Flicker Fix
+
+# IMS
+PRODUCT_PACKAGES += \
+    com.android.ims.rcs \
+    ImsService
+
+PRODUCT_COPY_FILES += \
+    device/realme/spaced/configs/permissions/privapp-permissions-ims.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-ims.xml
+
+# Custom Build Properties
 PRODUCT_PROPERTY_OVERRIDES += \
+    ro.product.marketname="Realme 8i" \
+    ro.infinity.soc="MediaTek Helio G96" \
+    ro.infinity.camera="50MP + 2MP + 2MP + 16MP" \
+    lineage.updater.uri=https://daizeuz-dred.github.io/ota/spaced.json \
+    infinity.updater.uri=https://daizeuz-dred.github.io/ota/spaced.json \
     debug.sf.disable_hwc=1 \
     debug.sf.layered_blur_res_divisor=3 \
+    persist.vendor.ims_support=1 \
+    persist.vendor.mtk_ct_volte_support=3 \
+    net.dns1=8.8.8.8 \
+    net.dns2=8.8.4.4
 
