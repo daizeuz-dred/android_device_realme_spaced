@@ -23,3 +23,28 @@ vendor.dynamic_sensor.             u:object_r:vendor_dynamic_sensor_prop:s0
 
 # Light
 persist.vendor.light.             u:object_r:vendor_persist_light_prop:s0
+
+# Map VM parameters to the existing MTK type to avoid "type not defined" errors
+vendor.camera.vm.parameters                  u:object_r:vendor_mtk_camera_prop:s0
+
+# Existing MTK types for the 0x12 (18-pixel) alignment fix
+persist.vendor.camera.debug.enable_fmt_align     u:object_r:vendor_mtk_camera_prop:s0
+persist.vendor.camera.debug.fmt_align_size       u:object_r:vendor_mtk_camera_prop:s0
+persist.vendor.camera.rescale_support            u:object_r:vendor_mtk_camera_prop:s0
+persist.vendor.camera.align_size                 u:object_r:vendor_mtk_camera_prop:s0
+persist.vendor.camera.fd.timeout                 u:object_r:vendor_mtk_camera_prop:s0
+persist.vendor.camera.p1.optimize                u:object_r:vendor_mtk_camera_prop:s0
+
+persist.vendor.camera.yuv.alignment.size         u:object_r:vendor_mtk_camera_prop:s0
+persist.vendor.camera.v_align_size               u:object_r:vendor_mtk_camera_prop:s0
+
+persist.vendor.camera.isp.tile_width             u:object_r:vendor_mtk_camera_prop:s0
+persist.vendor.camera.isp.tile_height            u:object_r:vendor_mtk_camera_prop:s0
+persist.vendor.camera.force.reset.isp            u:object_r:vendor_mtk_camera_prop:s0
+persist.vendor.camera.fifo.size                  u:object_r:vendor_mtk_camera_prop:s0
+
+persist.vendor.camera.ltm.force_height           u:object_r:vendor_mtk_camera_prop:s0
+persist.vendor.camera.ltm.buffer_size            u:object_r:vendor_mtk_camera_prop:s0
+persist.vendor.camera.ae.window_width            u:object_r:vendor_mtk_camera_prop:s0
+persist.vendor.camera.ae.window_height           u:object_r:vendor_mtk_camera_prop:s0
+persist.vendor.camera.force.viewfinder.start     u:object_r:vendor_mtk_camera_prop:s0
