@@ -52,3 +52,4 @@ type vendor_proc_oplus_version, fs_type, proc_type;
 # GPU
 type vendor_sysfs_gpu, fs_type, sysfs_type;
 
+type proc_boost_pool, fs_type, proc_type;

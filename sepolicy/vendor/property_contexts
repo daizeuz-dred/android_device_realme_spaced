@@ -23,3 +23,5 @@ vendor.dynamic_sensor.             u:object_r:vendor_dynamic_sensor_prop:s0
 
 # Light
 persist.vendor.light.             u:object_r:vendor_persist_light_prop:s0
+
+vendor.camera.vm.parameters  u:object_r:vendor_camera_vm_parameters_prop:s0
