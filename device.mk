@@ -600,3 +600,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     net.dns1=8.8.8.8 \
     net.dns2=8.8.4.4
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.camera.enable_mmqos=0 \
+    persist.vendor.camera.max_bw_allowed=1 \
+    vendor.camera.debug.enable_mmqos=0 \
+    persist.vendor.camera.fd.timeout=3000

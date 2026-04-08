@@ -27,3 +27,5 @@ vendor.oplus.hardware.oplusSensor::ISensorFeature                             u:
 
 # Wifi
 vendor.oplus.hardware.wifi.supplicant::IOplusSupplicant                       u:object_r:hal_wifi_supplicant_hwservice:s0
+
+vendor.oplus.hardware.osense::IOsense    u:object_r:vendor_hal_osense_hwservice:s0
