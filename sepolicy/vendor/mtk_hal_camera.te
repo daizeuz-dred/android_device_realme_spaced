@@ -17,3 +17,5 @@ allow mtk_hal_camera proc_boost_pool:file rw_file_perms;
 allow mtk_hal_camera vendor_hal_osense_hwservice:hwservice_manager find;
 
 set_prop(mtk_hal_camera, vendor_mtk_camera_prop)
+get_prop(mtk_hal_camera, vendor_mtk_camera_prop)
+get_prop(mtk_hal_camera, vendor_mtk_emcamera_prop)

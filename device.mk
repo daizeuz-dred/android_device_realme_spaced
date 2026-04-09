@@ -605,3 +605,57 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.camera.max_bw_allowed=1 \
     vendor.camera.debug.enable_mmqos=0 \
     persist.vendor.camera.fd.timeout=3000
+
+# Fix ISP 4-alignment crash (0x12 error)
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.camera.debug.enable_fmt_align=1 \
+    vendor.camera.debug.fmt_align_size=4 \
+    persist.vendor.camera.rescale_support=1 \
+    persist.vendor.camera.enable_lazy_hal=0 \
+    persist.vendor.camera.align_size=4 \
+    persist.vendor.camera.yuv.alignment.size=4 \
+    persist.vendor.camera.v_align_size=2
+
+# Fix ISP 4-alignment crash (0x12 error) and Second-Session lockout
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.camera.debug.enable_fmt_align=1 \
+    persist.vendor.camera.debug.fmt_align_size=4 \
+    persist.vendor.camera.rescale_support=1 \
+    persist.vendor.camera.align_size=4 \
+    persist.vendor.camera.enable_lazy_hal=0 \
+    \
+    # Forces HAL to release ISP hardware immediately on app exit
+    persist.vendor.camera.fd.timeout=500 \
+    persist.vendor.camera.p1.optimize=1 \
+    vendor.camera.debug.disable_reprocess=1 \
+    \
+    # Helps 3rd party apps handshake with MTK HAL
+    vendor.camera.aux.packagelist=com.whatsapp,com.snapchat.android,com.google.android.googlequicksearchbox
+
+PRODUCT_VENDOR_PROPERTIES += \
+    # Force standard tiling to fix "tile width error"
+    persist.vendor.camera.isp.tile_width=640 \
+    persist.vendor.camera.isp.tile_height=480 \
+    \
+    # Force aggressive session cleanup
+    persist.vendor.camera.force.reset.isp=1 \
+    persist.vendor.camera.fifo.size=32 \
+    \
+    # Fix rear camera stuck in Snapchat
+    vendor.camera.aux.packagelist=com.whatsapp,com.snapchat.android \
+    persist.vendor.camera.privapp.list=com.whatsapp,com.snapchat.android
+
+PRODUCT_VENDOR_PROPERTIES += \
+    # Fix the LTM Height error (1736 alignment)
+    persist.vendor.camera.ltm.force_height=1736 \
+    persist.vendor.camera.ltm.buffer_size=1736 \
+    \
+    # Fix AA_CHECK (Window Alignment)
+    # Forcing a 4-pixel aligned window for AE/AWB
+    persist.vendor.camera.ae.window_width=64 \
+    persist.vendor.camera.ae.window_height=92 \
+    \
+    # Force Start Viewfinder
+    # This addresses the "viewfinder is not opened yet" error
+    persist.vendor.camera.force.viewfinder.start=1 \
+    persist.vendor.camera.skip.pipe.check=0
