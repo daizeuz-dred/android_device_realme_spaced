@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/infinity_spaced.mk
+    $(LOCAL_DIR)/lineage_spaced.mk
