@@ -1,0 +1,4 @@
+allow init proc_dirty:file rw_file_perms;
+allow init proc_drop_caches:file rw_file_perms;
+allow init proc_sched:file rw_file_perms;
+allow init sysfs_gpu:file rw_file_perms;

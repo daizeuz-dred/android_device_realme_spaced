@@ -1,0 +1,2 @@
+type mtk_hal_gnss, domain;
+type mtk_hal_gnss_exec, exec_type, vendor_file_type, file_type;

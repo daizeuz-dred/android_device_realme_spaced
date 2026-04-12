@@ -142,9 +142,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     OplusDoze
 
-# Dolby
-$(call inherit-product, hardware/dolby/dolby.mk)
-
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
@@ -591,8 +588,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.marketname="Realme 8i" \
     ro.infinity.soc="MediaTek Helio G96" \
     ro.infinity.camera="50MP + 2MP + 2MP + 16MP" \
-    lineage.updater.uri=https://daizeuz-dred.github.io/ota/spaced.json \
-    infinity.updater.uri=https://daizeuz-dred.github.io/ota/spaced.json \
     debug.sf.disable_hwc=1 \
     debug.sf.layered_blur_res_divisor=3 \
     persist.vendor.ims_support=1 \
@@ -659,3 +654,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     # This addresses the "viewfinder is not opened yet" error
     persist.vendor.camera.force.viewfinder.start=1 \
     persist.vendor.camera.skip.pipe.check=0
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.perf.scroll_opt=true \
+    persist.sys.perf.scroll_opt.heavy_app=2
