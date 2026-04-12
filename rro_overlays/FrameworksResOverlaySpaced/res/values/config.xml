@@ -549,4 +549,5 @@
     <integer name="config_num_physical_display_anchors">2</integer>
     
     <bool name="config_gpu_composition_for_dim">true</bool>
+    <bool name="config_supportSmartPixels">true</bool>
 </resources>

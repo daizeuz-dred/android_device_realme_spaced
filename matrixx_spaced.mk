@@ -12,9 +12,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/realme/spaced/device.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/matrixx/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_spaced
+PRODUCT_NAME := matrixx_spaced
 PRODUCT_DEVICE := spaced
 PRODUCT_MANUFACTURER := realme
 PRODUCT_BRAND := realme
@@ -25,5 +25,14 @@ PRODUCT_GMS_CLIENTID_BASE := android-realme
 BUILD_FINGERPRINT := realme/RMX3286/RE54B4L1:13/SP1A.210812.016/R.1c05817+2a8bc:user/release-keys
 
 # Include Dolby Atmos
-$(call inherit-product, hardware/dolby/dolby.mk)
+# $(call inherit-product, hardware/dolby/dolby.mk)
+
+MATRIXX_MAINTAINER := DΞΞZNUTZ
+TARGET_SUPPORTED_REFRESH_RATES := 60,90,120
+TARGET_INCLUDE_PIXEL_LAUNCHER := true
+WITH_GMS_COMMS_SUITE := true
+WITH_GMS_AICORE := true
+BYPASS_CHARGE_SUPPORTED := true
+HBM_SUPPORTED := true
+HBM_NODE := /sys/class/backlight/panel0-backlight/hbm_mode
 

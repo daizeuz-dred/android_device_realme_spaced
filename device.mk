@@ -143,7 +143,7 @@ PRODUCT_PACKAGES += \
     OplusDoze
 
 # Dolby
-$(call inherit-product, hardware/dolby/dolby.mk)
+#$(call inherit-product, hardware/dolby/dolby.mk)
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -659,3 +659,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     # This addresses the "viewfinder is not opened yet" error
     persist.vendor.camera.force.viewfinder.start=1 \
     persist.vendor.camera.skip.pipe.check=0
+
+# SurfaceFlinger configurations
+$(call soong_config_set,surfaceflinger,frame_rate_category_high,120)
+$(call soong_config_set,surfaceflinger,frame_rate_category_min,60)
