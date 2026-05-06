@@ -1,0 +1,9 @@
+service flicker_fix /system/bin/fix_flicker.sh
+    class main
+    user system
+    group system graphics
+    oneshot
+    disabled
+
+on property:sys.boot_completed=1
+    start flicker_fix

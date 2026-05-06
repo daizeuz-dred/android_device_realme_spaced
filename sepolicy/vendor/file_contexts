@@ -56,3 +56,6 @@
 
 # Vibrator
 /vendor/bin/hw/android\.hardware\.vibrator-service\.mediatek                                                           u:object_r:hal_vibrator_default_exec:s0
+
+# Screen Flicker
+/vendor/bin/fix_flicker\.sh  u:object_r:flicker_fix_exec:s0

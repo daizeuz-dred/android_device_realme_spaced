@@ -143,7 +143,7 @@ PRODUCT_PACKAGES += \
     OplusDoze
 
 # Dolby
-$(call inherit-product, hardware/dolby/dolby.mk)
+#$(call inherit-product, hardware/dolby/dolby.mk)
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -659,3 +659,12 @@ PRODUCT_VENDOR_PROPERTIES += \
     # This addresses the "viewfinder is not opened yet" error
     persist.vendor.camera.force.viewfinder.start=1 \
     persist.vendor.camera.skip.pipe.check=0
+
+# Copy the script and the init file
+PRODUCT_COPY_FILES += \
+    device/realme/spaced/configs/init/fix_flicker.sh:$(TARGET_COPY_OUT_VENDOR)/bin/fix_flicker.sh \
+    device/realme/spaced/configs/init/init.flicker_fix.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.flicker_fix.rc
+
+# Set executable permissions for the script
+PRODUCT_PACKAGES += \
+    fix_flicker.sh

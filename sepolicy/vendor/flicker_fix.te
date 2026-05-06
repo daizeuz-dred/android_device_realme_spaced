@@ -1,0 +1,16 @@
+type flicker_fix, domain;
+type flicker_fix_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(flicker_fix)
+
+# Allow the script to execute shell commands
+allow flicker_fix vendor_shell_exec:file rx_file_perms;
+allow flicker_fix vendor_toolbox_exec:file rx_file_perms;
+
+# Essential for the "until" loop and service call
+allow flicker_fix surfaceflinger_service:service_manager find;
+binder_use(flicker_fix)
+binder_call(flicker_fix, surfaceflinger)
+
+# Allow reading SF dumpsys to check if it's up
+allow flicker_fix surfaceflinger:fifo_file rw_file_perms;
