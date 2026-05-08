@@ -549,4 +549,16 @@
     <integer name="config_num_physical_display_anchors">2</integer>
     
     <bool name="config_gpu_composition_for_dim">true</bool>
+    <integer name="config_defaultRefreshRate">120</integer>
+    <integer name="config_defaultPeakRefreshRate">120</integer>
+
+    <integer-array name="config_brightnessThresholdsOfAllowedRefreshRate">
+        <item>0</item>
+    </integer-array>
+
+    <string-array name="config_highRefreshRateBlacklist" translatable="false" />
+
+    <bool name="config_battery_percentage_setting_available">true</bool>
+       <!-- If not zero, limits the internal screen recorder's framerate to the set value. -->
+    <integer name="config_screenRecorderMaxFramerate">120</integer>
 </resources>
