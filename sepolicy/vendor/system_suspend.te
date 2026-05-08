@@ -1,2 +1,0 @@
-allow system_suspend sysfs_wakeup:file r_file_perms;
-allow system_suspend sysfs_wakeup:dir r_dir_perms;
