@@ -668,3 +668,18 @@ PRODUCT_COPY_FILES += \
 # Set executable permissions for the script
 PRODUCT_PACKAGES += \
     fix_flicker.sh
+
+# Display Tuning
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.phh.main_refresh_rate=120 \
+    persist.vendor.powerhal.config.refresh_rate=120 \
+    ro.surface_flinger.set_touch_timer_ms=200 \
+    ro.surface_flinger.set_idle_timer_ms=80
+
+# Enable whole-program R8 Java optimizations for SystemUI and system_server,
+# but also allow explicit overriding for testing and development.
+SYSTEM_OPTIMIZE_JAVA := true
+SYSTEMUI_OPTIMIZE_JAVA := true
+
+# Override 120 for SurfaceFlinger frame_rate_category_m8n
+$(call soong_config_set,surfaceflinger,frame_rate_category_min,120)
