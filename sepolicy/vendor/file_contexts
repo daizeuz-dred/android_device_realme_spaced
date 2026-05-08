@@ -59,3 +59,5 @@
 
 # Screen Flicker
 /vendor/bin/fix_flicker\.sh  u:object_r:flicker_fix_exec:s0
+
+/sys/class/wakeup(/.*)?    u:object_r:sysfs_wakeup:s0
