@@ -27,3 +27,21 @@ BUILD_FINGERPRINT := realme/RMX3286/RE54B4L1:13/SP1A.210812.016/R.1c05817+2a8bc:
 # Include Dolby Atmos
 $(call inherit-product, hardware/dolby/dolby.mk)
 
+# GMS (Google Mobile Services)
+WITH_GMS := true
+
+# Telephony
+TARGET_SUPPORTS_GOOGLE_TELEPHONY := false
+
+# Fingerprint (Realme 8i has side-mounted FPS, disable UDFPS unless you are implementing custom framework hooks)
+TARGET_CUSTOM_UDFPS := false
+
+# Display Engines (Disabled due to MTK stability issues)
+USE_REALITY_ENGINE := false
+
+# Rendering Optimizations
+SURFACE_FLINGER_BOOST := true
+
+# SurfaceFlinger Refresh Rates
+$(call soong_config_set,surfaceflinger,frame_rate_category_high,120)
+$(call soong_config_set,surfaceflinger,frame_rate_category_min,90)

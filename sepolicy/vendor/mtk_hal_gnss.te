@@ -1,1 +1,8 @@
 binder_call(system_app, mtk_hal_gnss)
+
+# Declare the missing type and assign it vendor/hal domains
+type mtk_hal_gnss, domain;
+type mtk_hal_gnss_exec, exec_type, vendor_file_type, file_type;
+
+# Your original failing line (now it will compile perfectly)
+allow system_app mtk_hal_gnss:binder { call transfer };
