@@ -57,7 +57,6 @@ PRODUCT_PACKAGES += \
     audio_policy.stub
 
 PRODUCT_PACKAGES += \
-    BesLoudness \
     MtkInCallService
 
 PRODUCT_PACKAGES += \
@@ -131,7 +130,6 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.1-resources.vendor \
     android.hardware.graphics.composer@2.2-resources.vendor \
     android.hardware.graphics.composer@2.3-service \
-    android.hardware.memtrack-service.mediatek-mali \
     libdrm.vendor \
     libdrm \
     libui.vendor \
@@ -320,7 +318,8 @@ PRODUCT_PACKAGES += \
     WifiResOverlaySpaced \
     TetheringResOverlaySpaced \
     CarrierConfigOverlaySpaced \
-    OplusDozeOverlaySpaced
+    OplusDozeOverlaySpaced \
+    LunarisSettingsOverlaySpaced
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -580,7 +579,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # IMS
 PRODUCT_PACKAGES += \
-    com.android.ims.rcs \
     ImsService
 
 PRODUCT_COPY_FILES += \
@@ -659,3 +657,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     # This addresses the "viewfinder is not opened yet" error
     persist.vendor.camera.force.viewfinder.start=1 \
     persist.vendor.camera.skip.pipe.check=0
+
+# Product Properties
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.lunaris.maintainer="DΞΞZNUTZ"

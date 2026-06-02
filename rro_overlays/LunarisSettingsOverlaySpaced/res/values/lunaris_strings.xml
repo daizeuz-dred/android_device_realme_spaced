@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="lunaris_device_message">realme 8i</string>
+    <string name="lunaris_processor_code_message">MediaTek Helio G96</string>
+    <string name="lunaris_battery_type_message">5000 mAh</string>
+    <string name="lunaris_screen_message">IPS LCD 120Hz</string>
+    <string name="lunaris_maintainer">DΞΞZNUTZ</string>
+</resources>
