@@ -194,3 +194,7 @@ include vendor/realme/spaced/BoardConfigVendor.mk
 
 # Radio
 MTK_RIL_SUPPORT := true
+
+# Allow overriding duplicate build targets safely
+BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
