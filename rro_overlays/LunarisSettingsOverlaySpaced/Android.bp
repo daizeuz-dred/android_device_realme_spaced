@@ -1,0 +1,6 @@
+runtime_resource_overlay {
+    name: "LunarisSettingsOverlaySpaced",
+    theme: "LunarisSettingsOverlaySpaced",
+    sdk_version: "current",
+    product_specific: true,
+}

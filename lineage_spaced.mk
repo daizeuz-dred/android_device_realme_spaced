@@ -50,3 +50,4 @@ $(call soong_config_set,surfaceflinger,frame_rate_category_min,120)
 -include vendor/lineage-priv/keys/keys.mk
 
 TARGET_SUPPORTS_BLUR := true
+$(call soong_config_set,surfaceflinger,frame_rate_category_min,90)

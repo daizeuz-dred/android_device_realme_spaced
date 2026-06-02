@@ -317,7 +317,8 @@ PRODUCT_PACKAGES += \
     WifiResOverlaySpaced \
     TetheringResOverlaySpaced \
     CarrierConfigOverlaySpaced \
-    OplusDozeOverlaySpaced
+    OplusDozeOverlaySpaced \
+    LunarisSettingsOverlaySpaced
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -657,3 +658,6 @@ PRODUCT_COPY_FILES += \
 # Force our local USB configuration over the hardware HAL package
 #PRODUCT_PACKAGES_OVERRIDE += init.mt6781.usb.rc
 
+# Product Properties
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.lunaris.maintainer="DΞΞZNUTZ"
