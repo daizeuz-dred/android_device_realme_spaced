@@ -661,3 +661,15 @@ PRODUCT_VENDOR_PROPERTIES += \
 # Product Properties
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.lunaris.maintainer="DΞΞZNUTZ"
+
+# USB Controller Configuration
+PRODUCT_VENDOR_PROPERTIES += \
+    vendor.usb.controller=11201000.usb \
+    vendor.usb.acm_cnt=0 \
+    vendor.usb.cleardata=1
+
+PRODUCT_COPY_FILES += \
+    device/realme/spaced/rootdir/etc/init.mt6781.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mt6781.usb.rc
+
+# Force our local USB configuration over the hardware HAL package
+#PRODUCT_PACKAGES_OVERRIDE += init.mt6781.usb.rc
