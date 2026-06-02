@@ -127,7 +127,7 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@3.0.vendor \
     android.hardware.graphics.allocator@4.0.vendor \
     android.hidl.allocator@1.0.vendor \
-    android.hardware.graphics.common-V2-ndk_platform.vendor \
+#    android.hardware.graphics.common-V2-ndk_platform.vendor \
     android.hardware.graphics.composer@2.1-resources.vendor \
     android.hardware.graphics.composer@2.2-resources.vendor \
     android.hardware.graphics.composer@2.3-service \
@@ -216,7 +216,7 @@ PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
 # Keymaster
 PRODUCT_PACKAGES += \
-   android.hardware.keymaster-V3-ndk_platform.vendor \
+#   android.hardware.keymaster-V3-ndk_platform.vendor \
    android.hardware.keymaster@3.0.vendor \
    android.hardware.keymaster@4.0.vendor \
    android.hardware.keymaster@4.1.vendor \
@@ -531,7 +531,7 @@ PRODUCT_PACKAGES += \
 # VNDK
 PRODUCT_PACKAGES += \
     libhidlbase_v32  \
-    libbinder-v32 \
+#    libbinder-v32 \
     libutils-v32 \
     libstagefright_foundation-v33
 
@@ -665,3 +665,19 @@ PRODUCT_VENDOR_PROPERTIES += \
     # This addresses the "viewfinder is not opened yet" error
     persist.vendor.camera.force.viewfinder.start=1 \
     persist.vendor.camera.skip.pipe.check=0
+
+# Product Properties
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.lunaris.maintainer="DΞΞZNUTZ"
+
+# USB Controller Configuration
+PRODUCT_VENDOR_PROPERTIES += \
+    vendor.usb.controller=11201000.usb \
+    vendor.usb.acm_cnt=0 \
+    vendor.usb.cleardata=1
+
+PRODUCT_COPY_FILES += \
+    device/realme/spaced/rootdir/etc/init.mt6781.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mt6781.usb.rc
+
+# Force our local USB configuration over the hardware HAL package
+#PRODUCT_PACKAGES_OVERRIDE += init.mt6781.usb.rc
