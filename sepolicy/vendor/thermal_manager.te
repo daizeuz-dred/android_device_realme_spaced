@@ -1,0 +1,2 @@
+# Grant proc_stat read permissions
+allow thermal_manager proc_stat:file { read open getattr };
