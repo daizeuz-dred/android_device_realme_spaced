@@ -87,10 +87,10 @@ ro.zygote.preload.enable=0
 zygote.critical_window.minute=10
 
 # Disable Variable Refresh Rate (Lock to 120Hz)
-#ro.surface_flinger.min_graphics_refresh_rate=120
-#ro.surface_flinger.peak_refresh_rate=120
-#ro.surface_flinger.ignore_hdr_camera_refresh_rate=true
+ro.surface_flinger.min_graphics_refresh_rate=120
+ro.surface_flinger.peak_refresh_rate=120
+ro.surface_flinger.ignore_hdr_camera_refresh_rate=true
 
 # Fix SurfaceFlinger scheduler uclamp errors
-#ro.surface_flinger.uclamp.screenshot=0
-#ro.surface_flinger.uclamp.bg=0
+ro.surface_flinger.uclamp.screenshot=0
+ro.surface_flinger.uclamp.bg=0
