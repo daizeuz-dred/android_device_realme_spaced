@@ -1,0 +1,5 @@
+# Declare the type if it isn't defined globally yet
+type mtk_hal_neuralnetwork, domain;
+
+# Grant the permission safely
+allow mtk_hal_neuralnetwork vndk_sp_file:lnk_file read;
