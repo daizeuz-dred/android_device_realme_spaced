@@ -37,3 +37,21 @@ WITH_GAPPS := true
 # Include Dolby Atmos
 $(call inherit-product, hardware/dolby/dolby.mk)
 
+# GMS (Google Mobile Services)
+WITH_GMS := true
+
+# Telephony
+TARGET_SUPPORTS_GOOGLE_TELEPHONY := false
+
+# Fingerprint (Realme 8i has side-mounted FPS, disable UDFPS unless you are implementing custom framework hooks)
+TARGET_CUSTOM_UDFPS := false
+
+# Display Engines (Disabled due to MTK stability issues)
+USE_REALITY_ENGINE := false
+
+# Rendering Optimizations
+SURFACE_FLINGER_BOOST := true
+
+# SurfaceFlinger Refresh Rates
+$(call soong_config_set,surfaceflinger,frame_rate_category_high,120)
+$(call soong_config_set,surfaceflinger,frame_rate_category_min,120)

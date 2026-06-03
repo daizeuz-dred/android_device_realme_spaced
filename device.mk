@@ -127,7 +127,7 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@3.0.vendor \
     android.hardware.graphics.allocator@4.0.vendor \
     android.hidl.allocator@1.0.vendor \
-#    android.hardware.graphics.common-V2-ndk_platform.vendor \
+    android.hardware.graphics.common-V2-ndk_platform.vendor \
     android.hardware.graphics.composer@2.1-resources.vendor \
     android.hardware.graphics.composer@2.2-resources.vendor \
     android.hardware.graphics.composer@2.3-service \
@@ -216,7 +216,7 @@ PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
 # Keymaster
 PRODUCT_PACKAGES += \
-#   android.hardware.keymaster-V3-ndk_platform.vendor \
+   android.hardware.keymaster-V3-ndk_platform.vendor \
    android.hardware.keymaster@3.0.vendor \
    android.hardware.keymaster@4.0.vendor \
    android.hardware.keymaster@4.1.vendor \
@@ -531,7 +531,7 @@ PRODUCT_PACKAGES += \
 # VNDK
 PRODUCT_PACKAGES += \
     libhidlbase_v32  \
-#    libbinder-v32 \
+    libbinder-v32 \
     libutils-v32 \
     libstagefright_foundation-v33
 
@@ -569,11 +569,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.latch_unsignaled=1 \
     debug.sf.enable_gl_backpressure=1 \
     
-    # Refresh Rate & Sync Timers
-    ro.surface_flinger.set_touch_timer_ms=200 \
-    ro.surface_flinger.set_display_power_timer_ms=1000 \
-    ro.surface_flinger.present_time_offset_ns=2000000 \
-    
     # Disable MTK Ambient Adaptive Light (Common flicker source)
     ro.vendor.mtk_aal_support=0
 
@@ -593,7 +588,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.infinity.camera="50MP + 2MP + 2MP + 16MP" \
     lineage.updater.uri=https://daizeuz-dred.github.io/ota/spaced.json \
     infinity.updater.uri=https://daizeuz-dred.github.io/ota/spaced.json \
-    debug.sf.disable_hwc=1 \
     debug.sf.layered_blur_res_divisor=3 \
     persist.vendor.ims_support=1 \
     persist.vendor.mtk_ct_volte_support=3 \
