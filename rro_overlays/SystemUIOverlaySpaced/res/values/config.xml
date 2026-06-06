@@ -43,9 +43,12 @@
 
     <!-- Blur radius behind Notification Shade -->
     <dimen name="max_shade_window_blur_radius">6dp</dimen>
-    <integer name="screenrecord_frame_rate">90</integer>
+    <integer name="screenrecord_frame_rate">120</integer>
     
     <integer name="screenrecord_bit_rate">20000000</integer>
     
-    <integer name="screenrecord_low_frame_rate">60</integer>
+    <integer name="screenrecord_low_frame_rate">120</integer>
+    <!-- The battery current divider, some kernel report current value in mA other in µA.
+         Leave 1 if you have mA, put 1000 if you have µA -->
+    <integer name="config_currentInfoDivider" translatable="false">1</integer>
 </resources>
