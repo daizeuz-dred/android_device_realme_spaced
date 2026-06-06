@@ -568,11 +568,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.latch_unsignaled=1 \
     debug.sf.enable_gl_backpressure=1 \
     
-    # Refresh Rate & Sync Timers
-    ro.surface_flinger.set_touch_timer_ms=200 \
-    ro.surface_flinger.set_display_power_timer_ms=1000 \
-    ro.surface_flinger.present_time_offset_ns=2000000 \
-    
     # Disable MTK Ambient Adaptive Light (Common flicker source)
     ro.vendor.mtk_aal_support=0
 
@@ -591,7 +586,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.infinity.camera="50MP + 2MP + 2MP + 16MP" \
     lineage.updater.uri=https://daizeuz-dred.github.io/ota/spaced.json \
     infinity.updater.uri=https://daizeuz-dred.github.io/ota/spaced.json \
-    debug.sf.disable_hwc=1 \
     debug.sf.layered_blur_res_divisor=3 \
     persist.vendor.ims_support=1 \
     persist.vendor.mtk_ct_volte_support=3 \
