@@ -39,6 +39,7 @@
         <!--Spatial Audio-->
         <library name="spatializer" path="libspatialaudio.so"/>
 	<!--Spatial Audio-->  
+        <library name="dolby_fx" path="libdolby_audiofx.so"/>
     </libraries>
 
     <!-- list of effects to load.
@@ -106,6 +107,7 @@
         <effect name="dlb_voice_call_listener" library="dvl" uuid="58d13383-b41d-05df-d94e-bb23db293260"/>
         <effect name="gamedap" library="gamedap" uuid="3783c334-d3a0-4d13-874f-0032e5fb80e2"/>
         <effect name="vqe" library="vqe" uuid="64a0f614-7fa4-48b8-b081-d59dc954616f"/>
+        <effect name="dolby" library="dolby_fx" uuid="248d6420-5cf7-11eb-ae93-0002a5d5c51b"/>
     </effects>
 
     <!-- Audio pre processor configurations.
