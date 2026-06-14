@@ -57,6 +57,7 @@ PRODUCT_PACKAGES += \
     audio_policy.stub
 
 PRODUCT_PACKAGES += \
+    BesLoudness \
     MtkInCallService
 
 PRODUCT_PACKAGES += \
@@ -130,6 +131,7 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.1-resources.vendor \
     android.hardware.graphics.composer@2.2-resources.vendor \
     android.hardware.graphics.composer@2.3-service \
+    android.hardware.memtrack-service.mediatek-mali \
     libdrm.vendor \
     libdrm \
     libui.vendor \
@@ -318,8 +320,7 @@ PRODUCT_PACKAGES += \
     WifiResOverlaySpaced \
     TetheringResOverlaySpaced \
     CarrierConfigOverlaySpaced \
-    OplusDozeOverlaySpaced \
-    LunarisSettingsOverlaySpaced
+    OplusDozeOverlaySpaced
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -559,21 +560,13 @@ $(call inherit-product, vendor/realme/spaced/spaced-vendor.mk)
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.1-service-mediatek
 
-# Graphics & SurfaceFlinger Tuning
-PRODUCT_PROPERTY_OVERRIDES += \
-    # Enables Triple Buffering to prevent recording lag
-    ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
-    
-    # Fixes the "Black Flash" flicker during overlays
-    debug.sf.latch_unsignaled=1 \
-    debug.sf.enable_gl_backpressure=1 \
-    
     # Disable MTK Ambient Adaptive Light (Common flicker source)
     ro.vendor.mtk_aal_support=0
 
 
 # IMS
 PRODUCT_PACKAGES += \
+    com.android.ims.rcs \
     ImsService
 
 PRODUCT_COPY_FILES += \
@@ -584,9 +577,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.marketname="Realme 8i" \
     ro.infinity.soc="MediaTek Helio G96" \
     ro.infinity.camera="50MP + 2MP + 2MP + 16MP" \
-    lineage.updater.uri=https://daizeuz-dred.github.io/ota/spaced.json \
-    infinity.updater.uri=https://daizeuz-dred.github.io/ota/spaced.json \
-    debug.sf.layered_blur_res_divisor=3 \
     persist.vendor.ims_support=1 \
     persist.vendor.mtk_ct_volte_support=3 \
     net.dns1=8.8.8.8 \
@@ -665,5 +655,3 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_COPY_FILES += \
     device/realme/spaced/rootdir/etc/init.mt6781.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mt6781.usb.rc
 
-# Force our local USB configuration over the hardware HAL package
-#PRODUCT_PACKAGES_OVERRIDE += init.mt6781.usb.rc
