@@ -586,10 +586,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.marketname="Realme 8i" \
     ro.infinity.soc="MediaTek Helio G96" \
     ro.infinity.camera="50MP + 2MP + 2MP + 16MP" \
-    lineage.updater.uri=https://daizeuz-dred.github.io/ota/spaced.json \
-    infinity.updater.uri=https://daizeuz-dred.github.io/ota/spaced.json \
-    debug.sf.layered_blur_res_divisor=3 \
-    persist.vendor.ims_support=1 \
     persist.vendor.mtk_ct_volte_support=3 \
     net.dns1=8.8.8.8 \
     net.dns2=8.8.4.4
@@ -653,10 +649,6 @@ PRODUCT_VENDOR_PROPERTIES += \
     # This addresses the "viewfinder is not opened yet" error
     persist.vendor.camera.force.viewfinder.start=1 \
     persist.vendor.camera.skip.pipe.check=0
-
-# Product Properties
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.lunaris.maintainer="DΞΞZNUTZ"
 
 # USB Controller Configuration
 PRODUCT_VENDOR_PROPERTIES += \
