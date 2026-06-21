@@ -661,3 +661,14 @@ PRODUCT_COPY_FILES += \
 
 # Force our local USB configuration over the hardware HAL package
 #PRODUCT_PACKAGES_OVERRIDE += init.mt6781.usb.rc
+
+# About Phone Hardware Spoofing (Realme 8i / Narzo 50 Specifications)
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.mist.display=1080 x 2412, 120Hz \
+    ro.mist.battery=5000mAh \
+    ro.mist.soc=MediaTek Helio G96 \
+    ro.mist.camera=50MP + 2MP + 2MP \
+    ro.mist.front=16MP \
+    ro.mist.platform=MT6781 \
+    ro.mist.screen=6.6' IPS LCD \
+    ro.mist.device.name=Realme 8i

@@ -48,3 +48,20 @@ $(call soong_config_set,surfaceflinger,frame_rate_category_min,120)
 
 # Private Keys Setup
 # -include vendor/lineage-priv/keys/keys.mk
+
+# MistOS Configuration Flags
+MISTOS_MAINTAINER := "D Ξ Ξ Z N U T Z"
+
+# GMS Configuration
+WITH_GMS := true
+TARGET_USES_MINI_GAPPS := true
+
+# Launcher Selection (Requires WITH_GMS := true)
+TARGET_DEFAULT_PIXEL_LAUNCHER := true
+
+# Enable UI enhancements
+TARGET_ENABLE_BLUR := true
+
+# Enable features
+TARGET_SUPPORTS_QUICK_TAP := true
+BYPASS_CHARGE_SUPPORTED := true
