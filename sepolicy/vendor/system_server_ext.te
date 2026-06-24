@@ -3,8 +3,3 @@ allow system_server vendor_proc_charger:dir search;
 allow system_server vendor_proc_display:dir search;
 allow system_server vendor_proc_oplus_version:dir search;
 allow system_server vendor_proc_oplus_sensor_feature:dir search;
-
-# Allow system_suspend to read vendor battery supply sysfs nodes
-# for wakelock accounting (Doze suspend stats)
-allow system_suspend vendor_sysfs_battery_supply:file { read open getattr };
-allow system_suspend vendor_sysfs_battery_supply:dir { read open search getattr };
