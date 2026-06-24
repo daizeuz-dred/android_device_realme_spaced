@@ -761,12 +761,12 @@ on property:sys.boot_completed=1
 service fuelgauged /vendor/bin/fuelgauged
     class core
     user system
-    group system
+    group system wakelock input
 
 service fuelgauged_nvram /vendor/bin/fuelgauged_nvram
     class main
     user system
-    group system
+    group system wakelock input
     oneshot
 
 #adb
