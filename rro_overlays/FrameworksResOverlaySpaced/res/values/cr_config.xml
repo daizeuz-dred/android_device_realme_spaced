@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="config_hasDashCharger">false</bool>
+    <bool name="config_hasWarpCharger">false</bool>
+    <bool name="config_hasVoocCharger">true</bool>
+    <bool name="config_hasTurboPowerCharger">false</bool>
+
+    <bool name="config_pocketModeSupported">true</bool>
+    <bool name="config_pocketUseLightSensor">true</bool>
+
+    <bool name="config_battery_percentage_setting_available">true</bool>
+
+    <string-array name="config_blockPackagesSensorDrain">
+        <item>com.whatsapp</item>
+        <item>org.telegram.messenger</item>
+        <item>com.snapchat.android</item>
+        <item>com.instagram.android</item>
+        <item>com.facebook.orca</item>
+        <item>com.android.chrome</item>
+    </string-array>
+</resources>
