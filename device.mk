@@ -57,7 +57,6 @@ PRODUCT_PACKAGES += \
     audio_policy.stub
 
 PRODUCT_PACKAGES += \
-    BesLoudness \
     MtkInCallService
 
 PRODUCT_PACKAGES += \
@@ -131,7 +130,6 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.1-resources.vendor \
     android.hardware.graphics.composer@2.2-resources.vendor \
     android.hardware.graphics.composer@2.3-service \
-    android.hardware.memtrack-service.mediatek-mali \
     libdrm.vendor \
     libdrm \
     libui.vendor \
@@ -575,7 +573,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # IMS
 PRODUCT_PACKAGES += \
-    com.android.ims.rcs \
     ImsService
 
 PRODUCT_COPY_FILES += \
