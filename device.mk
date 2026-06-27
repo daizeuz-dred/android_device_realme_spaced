@@ -663,3 +663,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.lunaris.maintainer="DΞΞZNUTZ"
 
+# Fix ndk_platform libs missing from vendor partition
+PRODUCT_COPY_FILES += \
+    vendor/realme/spaced/proprietary/odm/lib/vendor.oplus.hardware.performance-V1-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.oplus.hardware.performance-V1-ndk_platform.so \
+    vendor/realme/spaced/proprietary/odm/lib64/vendor.oplus.hardware.performance-V1-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.oplus.hardware.performance-V1-ndk_platform.so \
+    vendor/realme/spaced/proprietary/odm/lib/vendor.oplus.hardware.osense.client-V1-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.oplus.hardware.osense.client-V1-ndk_platform.so \
+    vendor/realme/spaced/proprietary/odm/lib64/vendor.oplus.hardware.osense.client-V1-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.oplus.hardware.osense.client-V1-ndk_platform.so
