@@ -301,7 +301,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/nfc_features.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_nfc/nfc_features.xml
 
-
 # Update
 AB_OTA_UPDATER := false
 PRODUCT_SOONG_NAMESPACES += bootable/deprecated-ota
@@ -570,7 +569,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     # Disable MTK Ambient Adaptive Light (Common flicker source)
     ro.vendor.mtk_aal_support=0
 
-
 # IMS
 PRODUCT_PACKAGES += \
     ImsService
@@ -658,3 +656,4 @@ PRODUCT_COPY_FILES += \
 
 # Force our local USB configuration over the hardware HAL package
 #PRODUCT_PACKAGES_OVERRIDE += init.mt6781.usb.rc
+

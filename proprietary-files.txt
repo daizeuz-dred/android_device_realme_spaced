@@ -445,10 +445,10 @@ odm/firmware/fastchg/21651/charging_thermal_config_default.txt
 odm/firmware/fastchg/charging_thermal_config_default.txt
 odm/lib/libosenseaidlhalclient.so
 odm/lib/vendor.oplus.hardware.charger@1.0.so
-odm/lib/vendor.oplus.hardware.osense.client-V1-ndk_platform.so
+odm/lib/vendor.oplus.hardware.osense.client-V1-ndk_platform.so;MODULE_SUFFIX=_odm
 odm/lib64/libosenseaidlhalclient.so
 odm/lib64/vendor.oplus.hardware.charger@1.0.so
-odm/lib64/vendor.oplus.hardware.osense.client-V1-ndk_platform.so
+odm/lib64/vendor.oplus.hardware.osense.client-V1-ndk_platform.so;MODULE_SUFFIX=_odm
 
 # Chipinfo
 vendor/bin/chipinfo
@@ -1720,8 +1720,8 @@ vendor/lib64/libvpu.so
 vendor/lib64/libvpu5.so
 
 # Media (Codec2)
-odm/lib/vendor.oplus.hardware.performance-V1-ndk_platform.so
-odm/lib64/vendor.oplus.hardware.performance-V1-ndk_platform.so
+odm/lib/vendor.oplus.hardware.performance-V1-ndk_platform.so;MODULE_SUFFIX=_vendor
+odm/lib64/vendor.oplus.hardware.performance-V1-ndk_platform.so;MODULE_SUFFIX=_vendor
 vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b
 vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc
 vendor/etc/vintf/manifest/manifest_media_c2_V1_1_default.xml:vendor/etc/vintf/manifest/manifest_media_c2_V1_2_default.xml
