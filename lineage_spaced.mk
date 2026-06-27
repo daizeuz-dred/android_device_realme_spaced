@@ -47,4 +47,6 @@ $(call soong_config_set,surfaceflinger,frame_rate_category_high,120)
 $(call soong_config_set,surfaceflinger,frame_rate_category_min,120)
 
 # Private Keys Setup
-# -include vendor/lineage-priv/keys/keys.mk
+-include vendor/lineage-priv/keys/keys.mk
+
+TARGET_SUPPORTS_BLUR := true
