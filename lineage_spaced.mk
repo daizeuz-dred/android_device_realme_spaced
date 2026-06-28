@@ -33,7 +33,6 @@ TARGET_HAS_UDFPS := false
 # Whether Including Google Apps
 WITH_GAPPS := true
 
->>>>>>> f243668 (spaced: lineage-23.2 device tree):lineage_spaced.mk
 # Include Dolby Atmos
 $(call inherit-product, hardware/dolby/dolby.mk)
 
