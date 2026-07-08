@@ -60,7 +60,7 @@ ro.iorapd.enable=false
 ro.kernel.zio=38,108,105,16
 
 # Memory
-ro.config.per_app_memcg=false
+ro.config.per_app_memcg=true
 
 # Misc
 ro.vendor.mtk_omacp_support=1
