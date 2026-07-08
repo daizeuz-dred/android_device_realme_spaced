@@ -79,6 +79,26 @@ void load_dalvik_properties() {
     property_override("dalvik.vm.heapmaxfree", heapmaxfree);
 }
 
+static void load_lmk_properties() {
+    struct sysinfo sys;
+
+    sysinfo(&sys);
+
+    if (sys.totalram >= 5ull * 1024 * 1024 * 1024) {
+        // 6GB variant — relax LMK: less aggressive, more cached
+        property_override("ro.lmk.thrashing_limit", "50");
+        property_override("ro.lmk.thrashing_limit_decay", "30");
+        property_override("ro.lmk.filecache_min_kb", "65536");
+        property_override("ro.lmk.stall_limit_critical", "60");
+    } else if (sys.totalram >= 3ull * 1024 * 1024 * 1024) {
+        // 4GB variant — balanced: stock MediaTek values
+        property_override("ro.lmk.thrashing_limit", "42");
+        property_override("ro.lmk.thrashing_limit_decay", "50");
+        property_override("ro.lmk.filecache_min_kb", "131072");
+        property_override("ro.lmk.stall_limit_critical", "40");
+    }
+}
+
 void check_nfc_support()
 {
     std::ifstream procfile(PROC_NFC_CHIPSET);
@@ -95,5 +115,6 @@ void check_nfc_support()
 
 void vendor_load_properties() {
     load_dalvik_properties();
+    load_lmk_properties();
     check_nfc_support();
 }
