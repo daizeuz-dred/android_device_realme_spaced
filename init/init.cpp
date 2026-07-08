@@ -90,12 +90,14 @@ static void load_lmk_properties() {
         property_override("ro.lmk.thrashing_limit_decay", "30");
         property_override("ro.lmk.filecache_min_kb", "65536");
         property_override("ro.lmk.stall_limit_critical", "60");
+        property_override("vendor.zram.algorithm", "zstd");
     } else if (sys.totalram >= 3ull * 1024 * 1024 * 1024) {
         // 4GB variant — balanced: stock MediaTek values
         property_override("ro.lmk.thrashing_limit", "42");
         property_override("ro.lmk.thrashing_limit_decay", "50");
         property_override("ro.lmk.filecache_min_kb", "131072");
         property_override("ro.lmk.stall_limit_critical", "40");
+        property_override("vendor.zram.algorithm", "lz4");
     }
 }
 
