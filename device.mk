@@ -126,7 +126,7 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@3.0.vendor \
     android.hardware.graphics.allocator@4.0.vendor \
     android.hidl.allocator@1.0.vendor \
-    android.hardware.graphics.common-ndk_shared \
+    android.hardware.graphics.common-V7-ndk \
     android.hardware.graphics.composer@2.1-resources.vendor \
     android.hardware.graphics.composer@2.2-resources.vendor \
     android.hardware.graphics.composer@2.3-service \
