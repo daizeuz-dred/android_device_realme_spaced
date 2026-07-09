@@ -100,7 +100,15 @@ function blob_fixup {
             [ "$2" = "" ] && return 0
             sed -i '/vts/Q' "$2"
             ;;
-	    vendor/lib64/libmtkcam_featurepolicy.so)
+        vendor/lib64/libwifi-hal.so)
+            [ "$2" = "" ] && return 0
+            # NOP wifi_multi_sta_set_primary_connection and
+            # wifi_multi_sta_set_use_case to prevent segfault
+            # on null pointer dereference during chip config
+            printf '\xc0\x03\x5f\xd6' | dd of="$2" bs=1 seek=$((0x13ac0)) conv=notrunc 2>/dev/null
+            printf '\xc0\x03\x5f\xd6' | dd of="$2" bs=1 seek=$((0x13c80)) conv=notrunc 2>/dev/null
+            ;;
+        vendor/lib64/libmtkcam_featurepolicy.so)
             [ "$2" = "" ] && return 0
             # evaluateCaptureConfiguration()
             sed -i "s/\x34\xE8\x87\x40\xB9/\x34\x28\x02\x80\x52/" "$2"
