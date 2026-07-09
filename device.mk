@@ -22,6 +22,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 30
 
+# Soong namespace
+PRODUCT_SOONG_NAMESPACES += \
+    device/realme/spaced
+
 # VINTF
 PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
 
@@ -529,9 +533,7 @@ PRODUCT_PACKAGES += \
 # VNDK
 PRODUCT_PACKAGES += \
     libhidlbase_v32  \
-    libbinder-v32 \
-    libutils-v32 \
-    libstagefright_foundation-v33
+    libbinder-v32
 
 PRODUCT_PACKAGES += \
     libbase_shim \
