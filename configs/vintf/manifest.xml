@@ -243,7 +243,8 @@
         <interface>
             <name>IBluetoothHci</name>
             <instance>default</instance>
-    </interface>
+        </interface>
+    </hal>
     <hal format="hidl">
         <name>vendor.oplus.hardware.cameraextension</name>
         <transport>hwbinder</transport>
@@ -253,5 +254,12 @@
             <instance>cameraextensionservice</instance>
         </interface>
     </hal>
-</hal>
+    <hal format="aidl">
+        <name>android.hardware.wifi</name>
+        <version>4</version>
+        <interface>
+            <name>IWifi</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
 </manifest>
