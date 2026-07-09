@@ -81,6 +81,7 @@ ro.mediatek.wlan.p2p=1
 mediatek.wlan.ctia=0
 wifi.tethering.interface=ap0
 persist.vendor.wfc.sys_wfc_support=1
+ro.vendor.mtk_wifi_multi_sta_support=0
 
 # Zygote
 ro.zygote.preload.enable=0
