@@ -107,6 +107,10 @@ function blob_fixup {
             # on null pointer dereference during chip config
             printf '\xc0\x03\x5f\xd6' | dd of="$2" bs=1 seek=$((0x13ac0)) conv=notrunc 2>/dev/null
             printf '\xc0\x03\x5f\xd6' | dd of="$2" bs=1 seek=$((0x13c80)) conv=notrunc 2>/dev/null
+            # NOP nan_disable_request to prevent crash in
+            # WifiVendorCommand constructor called during
+            # startDebugPacketFateMonitoring
+            printf '\xc0\x03\x5f\xd6' | dd of="$2" bs=1 seek=$((0x1a498)) conv=notrunc 2>/dev/null
             ;;
         vendor/lib64/libmtkcam_featurepolicy.so)
             [ "$2" = "" ] && return 0
