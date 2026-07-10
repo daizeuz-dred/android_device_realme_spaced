@@ -107,6 +107,9 @@ function blob_fixup {
             # on null pointer dereference during chip config
             printf '\xc0\x03\x5f\xd6' | dd of="$2" bs=1 seek=$((0x13ac0)) conv=notrunc 2>/dev/null
             printf '\xc0\x03\x5f\xd6' | dd of="$2" bs=1 seek=$((0x13c80)) conv=notrunc 2>/dev/null
+            # NOP wifi_get_driver_memory_dump to prevent SIGSEGV
+            # in getHalInfo during startRssiMonitoring (null ptr)
+            printf '\xc0\x03\x5f\xd6' | dd of="$2" bs=1 seek=$((0x194d0)) conv=notrunc 2>/dev/null
             # NOP all NAN functions to prevent crashes in
             # WifiVendorCommand constructor caused by null
             # wifi_info pointers during initialization
