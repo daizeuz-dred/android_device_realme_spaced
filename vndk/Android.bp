@@ -4,7 +4,20 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 
-// All VNDK v32 prebuilts are provided by hardware/lineage/compat
+cc_prebuilt_library_shared {
+	name: "libhidlbase_v32",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["libhidlbase_v32.so"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	vendor: true,
+}
 
 
 
