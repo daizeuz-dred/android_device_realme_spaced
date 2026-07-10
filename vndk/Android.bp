@@ -11,7 +11,7 @@ cc_prebuilt_library_shared {
 	},
 	target: {
 		android_arm64: {
-			srcs: ["libhidlbase-v32.so"],
+			srcs: ["libhidlbase_v32.so"],
 		},
 	},
 	compile_multilib: "64",
@@ -26,6 +26,20 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm64: {
 			srcs: ["libbinder-v32.so"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	vendor: true,
+}
+cc_prebuilt_library_shared {
+	name: "libutils-v32",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["libutils-v32.so"],
 		},
 	},
 	compile_multilib: "64",
