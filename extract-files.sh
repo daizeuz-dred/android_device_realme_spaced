@@ -100,6 +100,11 @@ function blob_fixup {
             [ "$2" = "" ] && return 0
             sed -i '/vts/Q' "$2"
             ;;
+        vendor/lib64/libwvhidl.so|\
+        vendor/lib64/mediadrm/libwvdrmengine.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite-3.9.1.so" "libprotobuf-cpp-lite.so" "${2}"
+            ;;
         vendor/lib64/libwifi-hal.so)
             [ "$2" = "" ] && return 0
             # NOP wifi_multi_sta_set_primary_connection and
