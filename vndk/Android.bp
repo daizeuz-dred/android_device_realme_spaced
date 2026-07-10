@@ -32,31 +32,4 @@ cc_prebuilt_library_shared {
 	check_elf_files: false,
 	vendor: true,
 }
-cc_prebuilt_library_shared {
-	name: "android.hardware.graphics.common-V2-ndk_platform",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm64: {
-			srcs: ["android.hardware.graphics.common-V2-ndk_platform.so"],
-		},
-	},
-	compile_multilib: "64",
-	check_elf_files: false,
-	vendor: true,
-}
-cc_prebuilt_library_shared {
-	name: "android.hardware.keymaster-V3-ndk_platform",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm64: {
-			srcs: ["android.hardware.keymaster-V3-ndk_platform.so"],
-		},
-	},
-	compile_multilib: "64",
-	check_elf_files: false,
-	vendor: true,
-}
+
