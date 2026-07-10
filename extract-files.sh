@@ -107,10 +107,29 @@ function blob_fixup {
             # on null pointer dereference during chip config
             printf '\xc0\x03\x5f\xd6' | dd of="$2" bs=1 seek=$((0x13ac0)) conv=notrunc 2>/dev/null
             printf '\xc0\x03\x5f\xd6' | dd of="$2" bs=1 seek=$((0x13c80)) conv=notrunc 2>/dev/null
-            # NOP nan_disable_request to prevent crash in
-            # WifiVendorCommand constructor called during
-            # startDebugPacketFateMonitoring
+            # NOP all NAN functions to prevent crashes in
+            # WifiVendorCommand constructor caused by null
+            # wifi_info pointers during initialization
+            printf '\xc0\x03\x5f\xd6' | dd of="$2" bs=1 seek=$((0x1a340)) conv=notrunc 2>/dev/null
             printf '\xc0\x03\x5f\xd6' | dd of="$2" bs=1 seek=$((0x1a498)) conv=notrunc 2>/dev/null
+            printf '\xc0\x03\x5f\xd6' | dd of="$2" bs=1 seek=$((0x1a5d0)) conv=notrunc 2>/dev/null
+            printf '\xc0\x03\x5f\xd6' | dd of="$2" bs=1 seek=$((0x1a718)) conv=notrunc 2>/dev/null
+            printf '\xc0\x03\x5f\xd6' | dd of="$2" bs=1 seek=$((0x1a860)) conv=notrunc 2>/dev/null
+            printf '\xc0\x03\x5f\xd6' | dd of="$2" bs=1 seek=$((0x1a9a8)) conv=notrunc 2>/dev/null
+            printf '\xc0\x03\x5f\xd6' | dd of="$2" bs=1 seek=$((0x1aaf0)) conv=notrunc 2>/dev/null
+            printf '\xc0\x03\x5f\xd6' | dd of="$2" bs=1 seek=$((0x1ac38)) conv=notrunc 2>/dev/null
+            printf '\xc0\x03\x5f\xd6' | dd of="$2" bs=1 seek=$((0x1ad80)) conv=notrunc 2>/dev/null
+            printf '\xc0\x03\x5f\xd6' | dd of="$2" bs=1 seek=$((0x1aee8)) conv=notrunc 2>/dev/null
+            printf '\xc0\x03\x5f\xd6' | dd of="$2" bs=1 seek=$((0x1b030)) conv=notrunc 2>/dev/null
+            printf '\xc0\x03\x5f\xd6' | dd of="$2" bs=1 seek=$((0x1b178)) conv=notrunc 2>/dev/null
+            printf '\xc0\x03\x5f\xd6' | dd of="$2" bs=1 seek=$((0x1b208)) conv=notrunc 2>/dev/null
+            printf '\xc0\x03\x5f\xd6' | dd of="$2" bs=1 seek=$((0x1b340)) conv=notrunc 2>/dev/null
+            printf '\xc0\x03\x5f\xd6' | dd of="$2" bs=1 seek=$((0x1b500)) conv=notrunc 2>/dev/null
+            printf '\xc0\x03\x5f\xd6' | dd of="$2" bs=1 seek=$((0x1b610)) conv=notrunc 2>/dev/null
+            printf '\xc0\x03\x5f\xd6' | dd of="$2" bs=1 seek=$((0x1b7b8)) conv=notrunc 2>/dev/null
+            printf '\xc0\x03\x5f\xd6' | dd of="$2" bs=1 seek=$((0x1b960)) conv=notrunc 2>/dev/null
+            printf '\xc0\x03\x5f\xd6' | dd of="$2" bs=1 seek=$((0x1bd18)) conv=notrunc 2>/dev/null
+            printf '\xc0\x03\x5f\xd6' | dd of="$2" bs=1 seek=$((0x1c070)) conv=notrunc 2>/dev/null
             ;;
         vendor/lib64/libmtkcam_featurepolicy.so)
             [ "$2" = "" ] && return 0
