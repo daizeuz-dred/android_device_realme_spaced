@@ -318,6 +318,7 @@ PRODUCT_PACKAGES += \
     SettingsOverlaySpaced \
     SettingsProviderResOverlaySpaced \
     SystemUIOverlaySpaced \
+    SharedConnectivityOverlaySpaced \
     WifiResOverlaySpaced \
     TetheringResOverlaySpaced \
     CarrierConfigOverlaySpaced \

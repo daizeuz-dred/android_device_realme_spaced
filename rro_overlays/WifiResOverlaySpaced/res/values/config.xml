@@ -74,8 +74,5 @@
          rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max -->
     <string name="config_wifi_tcp_buffers" translatable="false">1730560,3461120,6922240,524288,1048576,4525824</string>
 
-    <!-- Disable SharedConnectivityService to prevent GMS Chimera stub crash in SystemUI -->
-    <bool translatable="false" name="config_wifiSharedConnectivity">false</bool>
-
 </resources>
 
