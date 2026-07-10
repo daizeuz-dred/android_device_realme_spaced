@@ -550,4 +550,7 @@
     
     <bool name="config_gpu_composition_for_dim">true</bool>
     <integer name="config_refreshRateControlByAppWindow">0</integer>
+
+    <!-- Disable SharedConnectivityService to prevent GMS Chimera stub crash in SystemUI -->
+    <bool name="config_wifiSharedConnectivity">false</bool>
 </resources>
