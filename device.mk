@@ -400,9 +400,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
-# Protobuf (vendorcompat replaces libprotobuf-cpp-lite-3.9.1 needed by Widevine)
+# Protobuf 3.9.1 needed by Widevine (provided by hardware/lineage/compat)
 PRODUCT_PACKAGES += \
-    libprotobuf-cpp-lite-vendorcompat
+    libprotobuf-cpp-lite-3.9.1-vendorcompat
 
 # Public libraries
 PRODUCT_COPY_FILES += \
