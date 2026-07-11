@@ -1,12 +1,1 @@
-allow vendor_init vendor_proc_decimal:file w_file_perms;
-allow vendor_init nfc_data_vendor_file:dir { r_dir_perms create_dir_perms };
-
-allow vendor_init vendor_sysfs_usb_supply:dir search;
-allow vendor_init vendor_sysfs_usb_supply:file w_file_perms;
-
-allow vendor_init vendor_sysfs_otg_switch:file w_file_perms;
-
-get_prop(vendor_init, vendor_variant_prop)
-
-set_prop(vendor_init, vendor_mtk_pq_prop)
-set_prop(vendor_init, vendor_persist_light_prop)
+allow vendor_init vendor_proc_display:file write;
