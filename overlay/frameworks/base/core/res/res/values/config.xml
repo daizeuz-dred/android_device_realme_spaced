@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <!-- Disable SharedConnectivityService to prevent GMS Chimera stub crash in SystemUI -->
-    <bool name="config_wifiSharedConnectivity">false</bool>
-</resources>
