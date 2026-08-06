@@ -240,11 +240,11 @@ ro.lmk.downgrade_pressure=60
 ro.lmk.kill_timeout_ms=200
 ro.lmk.psi_complete_stall_ms=150
 ro.lmk.swap_free_low_percentage=12
-ro.lmk.swap_util_max=90
-ro.lmk.thrashing_limit=38
+ro.lmk.swap_util_max=70
+ro.lmk.thrashing_limit=50
 ro.lmk.thrashing_limit_decay=50
 ro.lmk.filecache_min_kb=131072
-ro.lmk.stall_limit_critical=40
+ro.lmk.stall_limit_critical=60
 
 # TEE
 ro.mtk_key_manager_support=1
