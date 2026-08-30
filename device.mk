@@ -621,7 +621,14 @@ PRODUCT_VENDOR_PROPERTIES += \
     vendor.camera.debug.disable_reprocess=1 \
     \
     # Helps 3rd party apps handshake with MTK HAL
-    vendor.camera.aux.packagelist=com.whatsapp,com.snapchat.android,com.google.android.googlequicksearchbox
+    #
+    # This is a whitelist: apps NOT listed here are restricted by the HAL to
+    # only the front/rear main cameras (aux access is denied).  It must be a
+    # single declaration - later PRODUCT_VENDOR_PROPERTIES overrides for the
+    # same key silently dropped apps from the earlier one.  Keep every app
+    # that needs camera access listed here in one place.
+    vendor.camera.aux.packagelist=com.whatsapp,com.snapchat.android,com.google.android.googlequicksearchbox,com.instagram.android \
+    persist.vendor.camera.privapp.list=com.whatsapp,com.snapchat.android,com.google.android.googlequicksearchbox,com.instagram.android
 
 PRODUCT_VENDOR_PROPERTIES += \
     # Force standard tiling to fix "tile width error"
@@ -630,11 +637,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     \
     # Force aggressive session cleanup
     persist.vendor.camera.force.reset.isp=1 \
-    persist.vendor.camera.fifo.size=32 \
-    \
-    # Fix rear camera stuck in Snapchat
-    vendor.camera.aux.packagelist=com.whatsapp,com.snapchat.android \
-    persist.vendor.camera.privapp.list=com.whatsapp,com.snapchat.android
+    persist.vendor.camera.fifo.size=32
 
 PRODUCT_VENDOR_PROPERTIES += \
     # Fix the LTM Height error (1736 alignment)
