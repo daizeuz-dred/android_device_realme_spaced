@@ -175,6 +175,7 @@ function blob_fixup {
         vendor/lib64/hw/android.hardware.sensors@2.X-subhal-mediatek.so)
             [ "$2" = "" ] && return 0
            "${PATCHELF}" --replace-needed "libsensorndkbridge.so" "android.hardware.sensors@1.0-convert-shared.so" "${2}"
+           "${PATCHELF}" --replace-needed "libmnl.so" "libmnl-mtk.so" "${2}"
             ;;
         vendor/lib64/libaaa_ltm.so|\
         vendor/lib64/lib3a.flash.so|\
@@ -185,7 +186,7 @@ function blob_fixup {
             [ "$2" = "" ] && return 0
             grep -q "liblog.so" "${2}" || "${PATCHELF_0_17_2}" --add-needed "liblog.so" "${2}"
             ;;
-        vendor/lib64/libmnl.so)
+        vendor/lib64/libmnl-mtk.so)
             [ "$2" = "" ] && return 0
             grep -q "libcutils.so" "${2}" || "${PATCHELF}" --add-needed "libcutils.so" "${2}"
             ;;
